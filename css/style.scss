@@ -1,0 +1,258 @@
+@import "./fonts";
+@import "./variables";
+@import "./extends";
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+.wrapper {
+  width: 1328px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 44px;
+  text-transform: uppercase;
+  color: $pink;
+  margin-left: -122px;
+}
+h2 {
+  color: $darkgrey;
+  font-family: "AM", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+}
+header {
+  background-color: $red;
+  height: 800px;
+}
+.main {
+  &__nav {
+    padding-top: 7px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-items {
+      list-style: none;
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      display: flex;
+      gap: 20px;
+      padding-left: 0;
+    }
+
+    &-link {
+      color: $pink;
+      text-decoration: none;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        left: 0;
+        width: 0;
+        background-color: $beidg;
+        transition: 0.3s ease-out;
+      }
+
+      &:hover {
+        color: $beidg;
+
+        &::before {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &__social {
+    display: flex;
+    gap: 16.5px;
+    &-icon {
+      &:hover {
+        position: relative;
+        bottom: 5px;
+        right: 5px;
+      }
+    }
+  }
+  &__image {
+    padding-bottom: 36px;
+  }
+}
+.about {
+  height: 713px;
+  h2 {
+    padding-top: 220px;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    line-height: 44.8px;
+    text-align: center;
+    padding-left: 285px;
+    padding-right: 286px;
+    margin-top: 0;
+  }
+  i {
+    font-style: italic;
+  }
+}
+.menu {
+  background-color: $beidg;
+  height: 1270px;
+
+  &__cont {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(2, 664px);
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding-right: 125px;
+  }
+  h2 {
+    margin-bottom: 17px;
+  }
+  p {
+    color: $darkgrey;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    line-height: 44.8px;
+    margin-bottom: 63px;
+    margin-top: 0;
+  }
+  &__button {
+    height: 58px;
+    margin-bottom: 12px;
+    border: 1px solid $darkgrey;
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &-food {
+      background-color: $darkgrey;
+      color: $white;
+      &:hover {
+        color: $red;
+        background-color: $pink;
+      }
+    }
+    &-drink,
+    &-away {
+      background-color: transparent;
+      color: $darkgrey;
+      &:hover {
+        color: transparent;
+        background-color: $pink;
+        color: $red;
+      }
+    }
+  }
+}
+.info {
+  background-color: $olive;
+  height: 473px;
+  margin-bottom: 152px;
+
+  &__cont {
+    padding-top: 125.6px;
+    display: grid;
+    grid-template-columns: repeat(3, 389.33px);
+    column-gap: 80px;
+    text-align: center;
+    color: $white;
+
+    &-title {
+      font-size: 17px;
+      font-weight: bold;
+    }
+    &-text {
+      font-size: 25px;
+      line-height: 13px;
+    }
+    &-blank {
+      visibility: hidden;
+    }
+  }
+}
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(2, 644px);
+  column-gap: 40px;
+  row-gap: 40px;
+  margin-bottom: 120px;
+  &__item {
+    &:hover {
+      transform: scale(1.1);
+      transition: 2s;
+    }
+    &-interior {
+      grid-area: 1/2/3/3;
+    }
+  }
+}
+.award {
+  background-color: $red;
+  color: $pink;
+  height: 461px;
+  margin-bottom: 52.25px;
+
+  &__cont {
+    display: grid;
+    grid-template-columns: repeat(2, 644px);
+    column-gap: 40px;
+    text-align: start;
+    padding-top: 120px;
+
+    &-title {
+      font-family: "AM", sans-serif;
+      font-size: 47px;
+      line-height: 62.5px;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 27px;
+      padding-right: 50px;
+    }
+  }
+}
+.footer {
+  a {
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: $black;
+  }
+  &__line1,
+  &__line2 {
+    padding-left: 433px;
+    padding-right: 432px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  &__line3 {
+    padding-left: 512px;
+    padding-right: 515px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9px;
+    margin-bottom: 24.25px;
+    font-size: 13px;
+    font-family: "Inter", sans-serif;
+    color: $gray;
+  }
+}
